@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat:wght@200;400;500&family=Oswald:wght@300&family=Outfit:wght@300&family=Ubuntu:wght@300&display=swap');
+
+/* BASIC STYLING THAT IS USED IN EVERY DEVELOPMENT */
+/*   * is for universal seector that means it apllied for all elements */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+html{
+    font-size:62.5%;
+    /* 1rem = 10px */
+}
+
+/* Variables are declared because to use the same color in whole project */
+:root{
+    --primary-color:#162447;
+    --para-color:#80849c;
+    --white:#fff;
+    --helper-color:#417ff3;
+}
+a{
+    text-decoration: none;
+}
+img{
+    display: inline-block;
+    /* This property is used to display an element as an inline-level block container */
+}
+li{
+    list-style: none;
+}
+
+h1,h2,h3,h4{
+    color:var(--primary-color)
+}
+.para{
+    font-size: 1.6rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: var(--para-color);
+}
+
+/* Header and Navbar styling */
+.header{
+    height: 9.6rem;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    padding: 0 5.5rem;
+}
+.logo{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+}
+.navbar-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Gap is always used in flex and provides a gap between elements in between them */
+    gap: 3.5rem;
+    font-size: 1.5rem;
+}
+.navbar-list .navbar-btn{
+    padding: 1.2rem 2.4rem;
+    background-color: var(--white);
+    border: 1px solid var(--helper-color);
+    color: var(--helper-color);
+    transition: 0.3s all ease-in-out;
+}
+.navbar-list .navbar-link:hover,
+.navbar-list .navbar-link:active{
+    color:brown;
+}
+.navbar-btn:hover{
+    color: var(--white);
+    background-color: var(--helper-color);
+    border: none;
+}
+.mobile-nav-icon{
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+.mobile-navbar-btn{
+    display: none;
+}
+/* Selectors by attribute and value || Display none because we dont want to show close even in mobile view also */
+.mobile-nav-icon[name="close"]{
+    display: none;
+}
+
+
+/* Now from here we are giving reusable codes , Here mainly in main section */
+.section{
+    padding: 9.6rem 0;
+}
+.container{
+    /* max-width is gien because it will take max width this much in every device */
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+.grid{
+    display: grid;
+    gap: 9.6rem;
+}
+.grid-two-column{
+    grid-template-columns: repeat(2,1fr);
+}
+.btn{
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    padding: 1.2rem 2.4rem;
+    background-color: var(--helper-color);
+    color: var(--white);
+    border: 1px solid var(--helper-color);
+    transition: 0.3s all linear;
+    
+}
+.btn:hover{
+    color: var(--helper-color);
+    background-color: var(--white);
+    transform: scale(1.05);
+}
+
+/* HERO SECTION STYLING */
+.section-hero{
+    position: relative;
+}
+
+
